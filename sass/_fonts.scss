@@ -1,0 +1,15 @@
+/* Fonts */
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,500,700,900,300,100&subset=latin,latin-ext);
+
+
+// Set local icon font
+@font-face {
+  font-family: '#{$icons}';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/icons/#{$icons}.eot);
+  src: url('../fonts/icons/#{$icons}.eot?#iefix') format('ie9-skip-eot'),
+       url('../fonts/icons/#{$icons}.woff') format('woff'),
+       url('../fonts/icons/#{$icons}.ttf')  format('truetype');
+}

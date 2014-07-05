@@ -1,0 +1,5 @@
+/* 
+ Plik do podmiany logo WP na logo Staircase
+*/
+
+#login h1 a { background: url(img/favicons/login-logo_80x80.png) no-repeat top center; }

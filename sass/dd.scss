@@ -1,0 +1,19 @@
+// Phone-sizes devices in portrait mode
+@include respond(portrait-phones) { }
+// Phone-sizes devices in landscape mode
+@include respond(landscape-phones) { }
+// All phone sizes
+@include respond(all-phones) { }
+// Tablet-sizes in portrait mode
+@include respond(portrait-tablets) { }
+// All tablet sizes
+@include respond(tablets) { }
+// Greater than 768px by default.
+@include respond(desktop) { }
+// A`la default grid
+@include respond("max-width: 960px") {}
+// Greater than 1200px
+@include respond(document-width) { }
+// Up to 2880px
+@include respond(large-screens) { }
+@include respond(print) { }
