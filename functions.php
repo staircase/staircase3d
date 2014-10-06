@@ -14,6 +14,12 @@ function custom_excerpt_length($length) {
     return 10;
 }
 
+// Custom Excerpts
+function staircase3d_index($length) // Create 20 Word Callback for Index page Excerpts, call using html5wp_excerpt('html5wp_index');
+{
+    return 20;
+}
+
 add_filter('excerpt_length', 'custom_excerpt_length', 999);
 
 // Formaty postów
@@ -45,8 +51,35 @@ function my_jquery_enqueue() {
 // Rejestruje mneu główne i górne
 register_nav_menus(array(
     'main-menu' => 'Menu główne',
-    'top-menu' => 'Menu górne'
+    'top-menu' => 'Menu górne',
+    'sidebar-menu' => 'Menu sidebar' // Sidebar Navigation
 ));
+
+// If Dynamic Sidebar Exists
+if (function_exists('register_sidebar'))
+{
+    // Define Sidebar Widget Area 1
+    register_sidebar(array(
+        'name' => __('Widget Area 1', 'staircase3d'),
+        'description' => __('Description for this widget-area...', 'staircase3d'),
+        'id' => 'widget-area-1',
+        'before_widget' => '<div id="%1$s" class="%2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
+    ));
+
+    // Define Sidebar Widget Area 2
+    register_sidebar(array(
+        'name' => __('Widget Area 2', 'staircase3d'),
+        'description' => __('Description for this widget-area...', 'staircase3d'),
+        'id' => 'widget-area-2',
+        'before_widget' => '<div id="%1$s" class="%2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
+    ));
+}
 
 // Paginacja
 function staircase3d_pagination() {
