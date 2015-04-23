@@ -1914,43 +1914,45 @@ and open the template in the editor.
 */
 /*  Created on : 2015-04-23, 09:25:21 Author     : staircase
 */
-.navigate { width: 100%; min-height: 58px; padding: 6px 0; display: block; background: rgba(255, 255, 255, 0.99); position: relative; }
-@media print { .navigate { display: none; } }
-@media only screen and (max-width: 767px) { .navigate { border: none; }
-  .navigate .column, .navigate .columns { min-height: 0; } }
-.navigate.fixed { position: fixed; z-index: 99999; top: 0px; }
-.navigate.pinned { position: absolute; }
-.navigate a.toggle { display: none; }
-@media only screen and (max-width: 767px) { .navigate a.toggle { top: 18%; right: 4%; width: 46px; position: absolute; text-align: center; display: inline-block; color: black; background: white; height: 40px; line-height: 38px; -webkit-border-radius: 0px; -moz-border-radius: 0px; -ms-border-radius: 0px; -o-border-radius: 0px; border-radius: 0px; font-size: 28px; font-size: 2rem; }
-  .navigate a.toggle:hover { background: white; }
-  .navigate a.toggle:active, .navigate a.toggle.active { background: #f2f2f2; } }
-@media only screen and (min-width: 768px) and (max-width: 1199px) { .navigate > ul > li > .btn a { padding: 0 12px 0 12px !important; }
-  .navigate ul > li .dropdown ul li.active .dropdown { left: -320px; } }
-.navigate .logo .site-name { padding: 0px; display: block; margin: 18px 0; }
-.navigate .logo .site-name a { text-indent: -9999em; font-size: 11px; color: white; width: 140px; display: block; height: 21px; background: url("../img/staircase_logo.png") 50% 50% no-repeat; }
-.navigate nav { margin-top: 14px; }
-.navigate nav ul { margin: 0; float: none; text-align: center; }
-@media only screen and (max-width: 767px) { .navigate nav ul { position: absolute; display: block; width: 100% !important; height: 0; max-height: 0; top: 70px; left: 0; overflow: hidden; text-align: center; background: #f2f2f2; }
-  .navigate nav ul.active { height: auto; max-height: 600px; z-index: 999998; -webkit-transition-duration: 0.5s; -moz-transition-duration: 0.5s; -o-transition-duration: 0.5s; transition-duration: 0.5s; -webkit-box-shadow: 0 2px 2px #d9d9d9; -moz-box-shadow: 0 2px 2px #d9d9d9; box-shadow: 0 2px 2px #d9d9d9; } }
-.navigate nav ul li { display: inline-block; text-align: center; padding-bottom: 0; margin: 0 15px; line-height: 1.85714em; }
-@media only screen and (max-width: 767px) { .navigate nav ul li:hover { background: white; } }
-.navigate nav ul li.contact { display: none; }
-@media only screen and (max-width: 767px) { .navigate nav ul li.contact { display: block; } }
-@media only screen and (max-width: 767px) { .navigate nav ul li { display: block; position: relative; min-height: 40px; max-height: 320px; height: auto; width: 100%; border-right: 0 !important; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; -webkit-transition-duration: 0.5s; -moz-transition-duration: 0.5s; -o-transition-duration: 0.5s; transition-duration: 0.5s; } }
-.navigate nav ul li .line { left: 13px; bottom: 5px; }
-.navigate nav ul li a { padding: 0 14px; white-space: nowrap; color: black; font-size: 11px; text-transform: uppercase; }
-.navigate nav ul li a i.icon-popup { position: absolute; }
-.navigate nav ul li .btn { border-color: #b3b3b3 !important; }
-.navigate nav ul li .dropdown { width: auto; min-width: 0; max-width: 320px; height: 0; position: absolute; background: #fafafa; overflow: hidden; z-index: 999; }
-@media only screen and (max-width: 767px) { .navigate nav ul li .dropdown { width: 100%; max-width: 100%; position: relative; -webkit-box-shadow: none !important; -moz-box-shadow: none !important; box-shadow: none !important; }
-  .navigate nav ul li.active .dropdown { border-bottom: 1px solid #e6e6e6; }
-  .navigate nav ul li.active .dropdown ul { position: relative; top: 0; background: #ebebeb; min-height: 40px; max-height: 250px; height: auto; overflow: auto; -webkit-box-shadow: none !important; -moz-box-shadow: none !important; box-shadow: none !important; }
-  .navigate nav ul li.active .dropdown ul li { line-height: 40px; height: 40px; border-bottom: #f2f2f2; }
-  .navigate nav ul li.active .dropdown ul li a { color: white; border-bottom: 1px solid #e6e6e6; }
-  .navigate nav ul li.active .dropdown ul li a:hover { color: #0099ff; } }
-.navigate .intouch { float: right; display: block; padding: 0 32px; font-size: 11px; line-height: 28px; background: rgba(255, 255, 255, 0); margin-top: 13px; border: 1px solid black; color: black; text-transform: uppercase; text-decoration: none; }
-.navigate .intouch:hover { background: black; color: white; }
-@media only screen and (max-width: 767px) { .navigate .intouch { display: none; } }
+.navcontain { width: 100%; min-height: 50px; height: 50px; padding: 0; display: block; background: rgba(255, 255, 255, 0.99); position: relative; }
+@media print { .navcontain { display: none; } }
+@media only screen and (max-width: 767px) { .navcontain { border: none; }
+  .navcontain .column, .navcontain .columns { min-height: 0; } }
+.navcontain.fixed { position: fixed; z-index: 99999; top: 0px; }
+.navcontain.pinned { position: absolute; }
+.navcontain a.toggle { display: none; }
+@media only screen and (max-width: 767px) { .navcontain a.toggle { top: 18%; right: 4%; width: 46px; position: absolute; text-align: center; display: inline-block; color: black; background: white; height: 40px; line-height: 38px; -webkit-border-radius: 0px; -moz-border-radius: 0px; -ms-border-radius: 0px; -o-border-radius: 0px; border-radius: 0px; font-size: 28px; font-size: 2rem; }
+  .navcontain a.toggle:hover { background: white; }
+  .navcontain a.toggle:active, .navcontain a.toggle.active { background: #f2f2f2; } }
+@media only screen and (min-width: 768px) and (max-width: 1199px) { .navcontain > ul > li > .btn a { padding: 0 12px 0 12px !important; }
+  .navcontain ul > li .dropdown ul li.active .dropdown { left: -320px; } }
+.navcontain .logo { margin: 0px; padding: 0px; }
+.navcontain .logo .site-name { padding: 0px; display: block; margin: 17px 0; }
+.navcontain .logo .site-name a { text-indent: -9999em; font-size: 11px; color: white; width: 140px; display: block; height: 21px; background: url("../img/staircase_logo.png") 50% 50% no-repeat; }
+.navcontain nav { margin: 0px; padding: 0px; }
+.navcontain nav ul { margin: 0; float: none; text-align: center; }
+@media only screen and (max-width: 767px) { .navcontain nav ul { position: absolute; display: block; width: 100% !important; height: 0; max-height: 0; top: 70px; left: 0; overflow: hidden; text-align: center; background: #f2f2f2; }
+  .navcontain nav ul.active { height: auto; max-height: 600px; z-index: 999998; -webkit-transition-duration: 0.5s; -moz-transition-duration: 0.5s; -o-transition-duration: 0.5s; transition-duration: 0.5s; -webkit-box-shadow: 0 2px 2px #d9d9d9; -moz-box-shadow: 0 2px 2px #d9d9d9; box-shadow: 0 2px 2px #d9d9d9; } }
+.navcontain nav ul li { display: inline-block; text-align: center; padding-bottom: 0; margin: 0 15px; line-height: 1.85714em; }
+@media only screen and (max-width: 767px) { .navcontain nav ul li:hover { background: white; } }
+.navcontain nav ul li:hover > a { background: white !important; }
+.navcontain nav ul li.contact { display: none; }
+@media only screen and (max-width: 767px) { .navcontain nav ul li.contact { display: block; } }
+@media only screen and (max-width: 767px) { .navcontain nav ul li { display: block; position: relative; min-height: 40px; max-height: 320px; height: auto; width: 100%; border-right: 0 !important; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; -webkit-transition-duration: 0.5s; -moz-transition-duration: 0.5s; -o-transition-duration: 0.5s; transition-duration: 0.5s; } }
+.navcontain nav ul li .line { left: 13px; bottom: 5px; }
+.navcontain nav ul li a { padding: 0 14px; white-space: nowrap; color: black; font-size: 11px; text-transform: uppercase; }
+.navcontain nav ul li a i.icon-popup { position: absolute; }
+.navcontain nav ul li .btn { border-color: #b3b3b3 !important; }
+.navcontain nav ul li .dropdown { width: auto; min-width: 0; max-width: 320px; height: 0; position: absolute; background: #fafafa; overflow: hidden; z-index: 999; }
+@media only screen and (max-width: 767px) { .navcontain nav ul li .dropdown { width: 100%; max-width: 100%; position: relative; -webkit-box-shadow: none !important; -moz-box-shadow: none !important; box-shadow: none !important; }
+  .navcontain nav ul li.active .dropdown { border-bottom: 1px solid #e6e6e6; }
+  .navcontain nav ul li.active .dropdown ul { position: relative; top: 0; background: #ebebeb; min-height: 40px; max-height: 250px; height: auto; overflow: auto; -webkit-box-shadow: none !important; -moz-box-shadow: none !important; box-shadow: none !important; }
+  .navcontain nav ul li.active .dropdown ul li { line-height: 40px; height: 40px; border-bottom: #f2f2f2; }
+  .navcontain nav ul li.active .dropdown ul li a { color: white; border-bottom: 1px solid #e6e6e6; }
+  .navcontain nav ul li.active .dropdown ul li a:hover { color: #0099ff; } }
+.navcontain .intouch { float: right; display: block; padding: 0 32px; font-size: 11px; line-height: 28px; background: rgba(255, 255, 255, 0); margin-top: 13px; border: 1px solid black; color: black; text-transform: uppercase; text-decoration: none; }
+.navcontain .intouch:hover { background: black; color: white; }
+@media only screen and (max-width: 767px) { .navcontain .intouch { display: none; } }
 
 /*
 To change this license header, choose License Headers in Project Properties.
@@ -1959,6 +1961,17 @@ and open the template in the editor.
 */
 /*  Created on : 2015-04-23, 09:25:26 Author     : staircase
 */
+.footer { color: #666666; height: 30px; display: block; margin-bottom: 20px; line-height: 1.85714em; padding: 20px 0; font-size: 12px; }
+@media print { .footer { display: none; } }
+.footer .aleft { text-align: left; }
+@media only screen and (max-width: 320px) { .footer .aleft { text-align: center; } }
+.footer .aright { text-align: right; float: right; }
+@media only screen and (max-width: 320px) { .footer .aright { text-align: center; float: none; } }
+@media only screen and (max-width: 767px) { .footer .aright { margin: 10px 0px; } }
+.footer a { color: #666666; }
+.footer sup { font-size: 6px; }
+.footer .lang { display: inline-block; margin-left: 30px; }
+
 /*
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates

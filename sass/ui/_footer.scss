@@ -8,3 +8,40 @@ and open the template in the editor.
     Author     : staircase
 */
 
+.footer {
+    @include respond(print) { display: none; }
+    color: #666666;
+    height: 30px;
+    display: block;
+    margin-bottom: 20px;
+    line-height: 1.85714em;
+    padding: 20px 0;
+    font-size: 12px;
+    .aleft {
+        text-align: left;
+        @include respond(portrait-phones) { 
+            text-align: center;
+        }
+    }
+    .aright {
+        text-align: right;
+        float: right;
+        @include respond(portrait-phones) {
+            text-align: center;
+            float: none;
+        }
+        @include respond(all-phones) {
+            margin: 10px 0px;
+        }
+    }
+    a {
+        color: #666666;
+    }     
+    sup {
+        font-size: 6px;
+    }
+    .lang {
+        display: inline-block;
+        margin-left: 30px;
+    }
+}

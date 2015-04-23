@@ -55,7 +55,6 @@
         <div class="navcontain">
             <header id="header" class="navbar" gumby-fixed="top" role="banner">
                 <div class="row">
-                    <a class="toggle" gumby-trigger=".sf-menu" href="#"><i class="icon-menu"></i></a>
                     <div class="three columns logo" >
                         <?php if (is_home() || is_front_page()) : ?>
                             <h1 class="site-name"><a itemprop="url" href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?> | <?php echo get_bloginfo('description'); ?>"><span itemprop="name"><?php bloginfo('name'); ?></span></a></h1>  
@@ -72,6 +71,7 @@
                         }
                         ?>
                     </nav>           
+                    <a class="toggle" gumby-trigger=".sf-menu" href="#"><i class="icon-menu"></i></a>
                 </div>
             </header>
         </div>

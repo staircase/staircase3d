@@ -8,11 +8,12 @@ and open the template in the editor.
     Author     : staircase
 */
 
-.navigate {
+.navcontain {
     @include respond(print) { display: none; }
     width: 100%;
-    min-height: 58px;
-    padding: 6px 0;
+    min-height: 50px;
+    height: 50px;
+    padding: 0;
     display: block;
     //margin-bottom: 20px;
     background: rgba(255,255,255,0.99);
@@ -62,10 +63,12 @@ and open the template in the editor.
         }
     }
     .logo {
+        margin: 0px;
+        padding: 0px;
         .site-name { 
             padding: 0px;
             display: block;
-            margin: 18px 0;
+            margin: 17px 0;
             a {
                 text-indent: -9999em;
                 font-size: 11px;
@@ -78,7 +81,8 @@ and open the template in the editor.
         }
     }
     nav {
-        margin-top: 14px;
+        margin: 0px;
+        padding: 0px;
         ul {
             margin: 0;
             float: none;
@@ -106,6 +110,9 @@ and open the template in the editor.
                 &:hover {
                     @include respond(all-phones) { 
                         background: white;
+                    }
+                    > a {
+                        background: white !important;
                     }
                 }
                 &.contact {
