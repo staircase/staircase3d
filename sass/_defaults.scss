@@ -1,0 +1,217 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2015-04-23, 09:26:54
+    Author     : staircase
+*/
+
+// Mixin for styling placeholder
+@mixin placeholder {
+    ::-webkit-input-placeholder {@content}
+    :-moz-placeholder           {@content}
+    ::-moz-placeholder          {@content}
+    :-ms-input-placeholder      {@content}  
+}
+
+// Golden ratio font sizes
+$h1: 36px;
+$h2: 24px;
+$h3: 18px;
+$p: 14px;
+$small: 12px;
+$abbr: 10px;
+
+.center {
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding: 0px;
+}
+
+sup, sub {
+    vertical-align: baseline;
+    position: relative;
+    top: -0.6em;
+}
+sub { top: 0.6em; }
+
+.entry-content {
+    margin-bottom: 100px;
+    h1 { 
+        margin: 50px 0 48px; 
+    }
+    h2 { 
+        margin: 50px 0 36px; 
+    }
+    h3 { 
+        margin: 50px 0 24px; 
+    }
+    h4 { 
+        margin: 50px 0 18px; 
+    }
+    h5 { 
+        margin: 50px 0 14px; 
+    }
+    h6 { 
+        margin: 50px 0 12px; 
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: 700;
+        &:first-child {
+            margin-top: 0px;
+        }
+    }
+    ul { 
+        list-style: disc; 
+        margin: 10px 0 0 10px; 
+    }
+    ol  { 
+        margin: 10px 0 0 10px; 
+    }
+    ul, ol {
+        line-height: 22px; 
+        padding-left: 10px; 
+        li {
+            padding: 0 0 0 5px;
+        }
+    }
+    ul ul, ul ol, ol ol, ol ul { 
+        margin: 0 0 0 5px;  
+    }
+    ul ul li, ul ol li, ol ol li, ol ul li { 
+        margin-bottom: 0px; 
+    }
+    hr {
+        background-color: white;
+        border: 1px solid #333333;
+        height: 1px;
+        margin: 50px auto;
+        max-width: 370px;
+        position: relative;
+        &:before {
+            font: {
+                family: "Entypo";
+                size: 1.85rem;
+            }
+            content: "\1f516";
+            background: white;
+            color: #333;
+            padding: 20px;
+            left: 50%;
+            margin-left: -55px;
+            position: absolute;
+            right: 50%;
+            text-align: center;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 70px;
+        }
+    }
+}
+
+form { 
+    input[type=text],
+    input[type=url],
+    input[type=tel],
+    input[type=number],
+    input[type=color],
+    input[type=email] {
+        @include box-shadow(rgba(0,0,0,0.2) 0px 1px inset);
+        border: 1px solid #d4d4d4;
+        height: 41px;
+        border-radius: 0px;
+        color: #333;
+        padding: 0 10px;
+        font-family: $font-family;
+        display: inline-block;
+        margin: 7px 0;
+        font-size: 14px;
+        width: 100%;
+        @include placeholder {
+            font-weight: 300;
+            color: #999;
+        }
+    }
+    textarea {
+        @include box-shadow(rgba(0,0,0,0.2) 0px 1px inset);
+        border: 1px solid #d4d4d4;
+        color: #333;
+        padding: 10px;
+        font-family: $font-family;
+        display: inline-block;
+        font-size: 14px;
+        line-height: 22px;
+        margin: 7px 0 15px;
+        width: 100%;
+        max-width: 100%;
+        min-width: 100%;
+        min-height: 220px;
+        height: 220px;
+        @include placeholder {
+            font-weight: 300;
+            color: #999;
+        }
+    }
+    label.label-floatlabel {
+        font-weight: normal;
+        font-size: 11px;
+        margin-left: 2px;
+        color: #999;
+    }
+}
+
+.wpcf7-form {
+    dl {
+        width: 100%;
+        dt {
+            width: 48%;
+            margin-right: 2%;
+            display: block;
+            float:left;
+            font-weight: normal;
+        }
+        dd {
+            width: 48%;
+            margin-left: 2%;
+            display: block;
+            float:left;
+        }
+    }
+    .wpcf7-not-valid-tip {
+        font-size: 11px;
+        text-transform: uppercase;
+        color: #ff5539;
+    }
+    .wpcf7-submit {
+        float: right;
+        display: block;
+        padding: 0 32px;
+        font-size: 11px;
+        height: 28px;
+        color: #000000;
+        text-decoration: none;
+        text-transform: uppercase;
+        line-height: 28px;
+        background: rgba(255,255,255,0);
+        border: 1px solid black;
+        &:hover {
+            background: black;            
+            color: white;
+        }
+    }
+}
+
+/* Trick the WordPress Theme Bot *Evil* */
+.aligncenter { display: block; margin: 0 auto; }
+.alignright { float: right; margin: 0 0 1em 1em; }
+.alignleft { float: left; margin: 0 1em 1em 0; }
+.floatleft { float: left; }
+.floatright { float: right; }
+
+.wp-caption { text-align: center; background: #F0F0F0; padding-top: 4px; margin: 10px }
+.wp-caption img { margin: 0; padding: 0; border: none }
+.wp-caption .wp-caption-text { font-size: 11px; line-height: 17px; padding: 0 4px 5px; margin: 0 }

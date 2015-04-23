@@ -1,0 +1,99 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2015-04-23, 09:26:21
+    Author     : staircase
+*/
+
+.single-post { 
+    .entry-content {
+        padding-right: 16.9445%;
+        @include respond(print) { padding-right: 0; }
+        iframe, object, embed {
+            width: 100%;
+            max-width: 100%;
+            height: 445px;
+        }
+    }
+    .post-meta { 
+        @include respond(print) { display: none; }
+        padding-left: 80px;
+        .post-author {
+            img {
+                width: 80px;
+                height: 80px;
+            }
+        }
+        .box {
+            font-size: 12px;
+            line-height: 18px;
+            margin-bottom: 20px;
+            text-align: right;
+            p {
+                text-align: right;
+                font-size: 12px;
+                line-height: 18px;
+            }
+        }
+        .tags {
+            a {
+                line-height: 30px;
+                -webkit-perspective: 1000px;
+                -moz-perspective: 1000px;
+                perspective: 1000px;
+                font-size: 12px;
+                color: #333;
+                margin: 3px 0 3px 5px;
+                &:hover, &:focus {
+                    color: white;
+                    span {
+                        -webkit-transform: rotateX(90deg) translateY(-22px);
+                        -moz-transform: rotateX(90deg) translateY(-22px);
+                        transform: rotateX(90deg) translateY(-22px);
+                        &::before {
+                            color: white;
+                            background: #0099FF;	
+                        }
+                    }
+                }
+                span {
+                    position: relative;
+                    display: inline-block;
+                    padding: 0 14px;
+                    background: #ECECEC;
+                    -webkit-transition: -webkit-transform 0.3s;
+                    -moz-transition: -moz-transform 0.3s;
+                    transition: transform 0.3s;
+                    -webkit-transform-origin: 50% 0;
+                    -moz-transform-origin: 50% 0;
+                    transform-origin: 50% 0;
+                    -webkit-transform-style: preserve-3d;
+                    -moz-transform-style: preserve-3d;
+                    transform-style: preserve-3d;
+                    &::before {
+                        position: absolute;
+                        top: 100%;
+                        left: 0px;
+                        text-align: center;
+                        width: 100%;
+                        height: 100%;
+                        background: #0965a0;
+                        content: attr(data-hover);
+                        -webkit-transition: background 0.3s;
+                        -moz-transition: background 0.3s;
+                        transition: background 0.3s;
+                        -webkit-transform: rotateX(-90deg);
+                        -moz-transform: rotateX(-90deg);
+                        transform: rotateX(-90deg);
+                        -webkit-transform-origin: 50% 0;
+                        -moz-transform-origin: 50% 0;
+                        transform-origin: 50% 0;
+                    }
+                }
+            }
+        }
+    }
+}

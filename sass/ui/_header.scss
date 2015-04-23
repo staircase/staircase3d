@@ -1,0 +1,214 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2015-04-23, 09:25:21
+    Author     : staircase
+*/
+
+.navigate {
+    @include respond(print) { display: none; }
+    width: 100%;
+    min-height: 58px;
+    padding: 6px 0;
+    display: block;
+    //margin-bottom: 20px;
+    background: rgba(255,255,255,0.99);
+    position: relative;
+    @include respond(all-phones) {
+        border: none;
+        .column, .columns {
+            min-height: 0;
+        }
+    }
+    &.fixed {
+        position: fixed;
+        z-index: 99999;
+        top: 0px;
+    }
+    &.pinned {
+        position: absolute;
+    }
+    a.toggle {
+        display: none;
+        @include respond(all-phones) {
+            top: 18%;
+            right: 4%;
+            width: 46px;
+            position: absolute;
+            text-align: center;
+            display: inline-block;
+            color: $navbar-link-color;
+            background: $navbar-color;
+            @include line-and-height(40px);
+            @include border-radius($button-radius);
+            @include font-size($larger);
+            &:hover {
+                background: lighten($navbar-color, 5%);
+            }
+            &:active, &.active {
+                background: darken($navbar-color, 5%);
+            }
+        }
+    }
+    @include respond(tablets) {
+        > ul > li > .btn a {
+            padding: 0 $small 0 $small !important;
+        }
+        ul > li .dropdown ul li.active .dropdown {
+            left: -$min-device-width;
+        }
+    }
+    .logo {
+        .site-name { 
+            padding: 0px;
+            display: block;
+            margin: 18px 0;
+            a {
+                text-indent: -9999em;
+                font-size: 11px;
+                color: white;
+                width: 140px;
+                display: block;
+                height: 21px;
+                background: url('../img/staircase_logo.png') 50% 50% no-repeat;
+            }
+        }
+    }
+    nav {
+        margin-top: 14px;
+        ul {
+            margin: 0;
+            float: none;
+            text-align: center;
+            @include respond(all-phones) {
+                position: absolute;
+                display: block;
+                width: 100% !important;
+                height: 0;
+                max-height: 0;
+                top: 70px;
+                left: 0;
+                overflow: hidden;
+                text-align: center;
+                background: darken($navbar-color, 5%);
+                &.active {
+                    height: auto;
+                    max-height: 600px;
+                    z-index: 999998;
+                    @include transition-duration(.5s);
+                    @include box-shadow(0 2px 2px darken($navbar-color, 15%));
+                }
+            }        
+            li {
+                &:hover {
+                    @include respond(all-phones) { 
+                        background: white;
+                    }
+                }
+                &.contact {
+                    display: none;
+                    @include respond(all-phones) {            
+                        display: block; 
+                    }
+                }
+                display: inline-block;
+                text-align: center;
+                padding-bottom: 0;
+                margin: 0 15px;
+                line-height: 1.85714em;
+                @include respond(all-phones) {                
+                    display: block;            
+                    position: relative;
+                    min-height: 40px;
+                    max-height: 320px;
+                    height: auto;
+                    width: 100%;
+                    border-right: 0 !important;
+                    @include box-shadow(none);
+                    @include transition-duration(.5s);
+                }
+                .line {
+                    left: 13px;
+                    bottom: 5px;
+                }
+                a {
+                    padding: 0 ms(0);
+                    white-space: nowrap;
+                    color: $navbar-link-color;
+                    font-size: 11px;
+                    text-transform: uppercase;
+                    i.icon-popup {
+                        position: absolute;
+                    }
+                }
+                .btn {
+                    border-color: darken($navbar-color, 30%) !important;
+                }
+                .dropdown {
+                    width: auto;
+                    min-width: 0;
+                    max-width: $min-device-width;
+                    height: 0;
+                    position: absolute;
+                    background: lighten($default-color, 3%);
+                    overflow: hidden;
+                    z-index: 999;
+                }
+                @include respond(all-phones) {
+                    .dropdown {
+                        width: 100%;
+                        max-width: 100%;
+                        position: relative;
+                        @include box-shadow(none !important);
+                    }
+                    &.active .dropdown {
+                        border-bottom: 1px solid darken($navbar-color, 10%);
+                    }
+                    &.active .dropdown ul {
+                        position: relative;
+                        top: 0;
+                        background: darken($navbar-color, 8%);
+                        min-height: 40px;
+                        max-height: 250px;
+                        height: auto;
+                        overflow: auto;
+                        @include box-shadow(none !important);
+                        li {
+                            line-height: 40px;
+                            height: 40px;
+                            border-bottom: darken($navbar-color, 5%);
+                            a {
+                                color: $white;
+                                border-bottom: 1px solid darken($navbar-color, 10%);
+                                &:hover {color: $body-link-color;}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .intouch {
+        float: right;
+        display: block;
+        padding: 0 32px;
+        font-size: 11px;
+        line-height: 28px;
+        background: rgba(255,255,255,0);
+        margin-top: 13px;
+        border: 1px solid black;
+        color: black;
+        text-transform: uppercase;
+        text-decoration: none;
+        &:hover {
+            background: black;
+            color: white;    
+        }
+        @include respond(all-phones) { 
+            display: none;
+        }
+    }
+}

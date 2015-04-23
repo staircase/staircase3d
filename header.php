@@ -11,22 +11,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
         
         <title><?php wp_title(''); if (wp_title('', false)) { echo ' | '; } bloginfo('name'); ?></title>
-                
-        <meta property="fb:page_id" content="" />
-        <meta name="twitter:card" content="summary">
-        
-        <meta property="og:url" content="<?php echo get_permalink( $post->ID ); ?>"/>
-        <meta name="twitter:url" content="<?php echo get_permalink( $post->ID ); ?>">
-        
-        <meta property="og:title" content="<?php wp_title(''); if (wp_title('', false)) { echo ' | '; } bloginfo('name'); ?>"/>
-        <meta name="twitter:title" content="<?php wp_title(''); if (wp_title('', false)) { echo ' | '; } bloginfo('name'); ?>">
-        
-        <meta property="og:description" content="<?php bloginfo('description'); ?>"/>
-        <meta name="twitter:description" content="<?php bloginfo('description'); ?>">
-                        
-        <meta itemprop="image" content="<?php echo get_template_directory_uri() ?>/img/favicons/icon.png">
-        <meta property="og:image" content="<?php echo get_template_directory_uri() ?>/img/favicons/icon.png"/>
-        <meta name="twitter:image" content="<?php echo get_template_directory_uri() ?>/img/favicons/icon.png">
         
         <link rel="shortcut icon" href="<?php echo get_template_directory_uri() ?>/img/favicons/favicon.ico"/>
         <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri() ?>/img/favicons/AppIcon60x60.png"/><!-- 60x60 -->
@@ -42,6 +26,9 @@
         wp_enqueue_script('plugins', get_template_directory_uri() . '/js/plugins.js', '', null, true);
         wp_enqueue_script('gumby-main', get_template_directory_uri() . '/js/main.js', '', null, true);
         wp_enqueue_script('modernizr', get_template_directory_uri() . '/js/modernizr-2.6.2.min.js', '', null, false);
+        if (is_home() || is_front_page()) {    
+            wp_enqueue_script('owl', get_template_directory_uri() . '/js/owl.carousel.min.js', '', null, false);
+        }
         if (is_single()) {
             
         }

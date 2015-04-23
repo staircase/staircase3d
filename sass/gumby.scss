@@ -20,6 +20,7 @@
 
 @import "modular-scale";
 @import "var/settings";
+@import "var/owl";
 @import "../bower_components/gumby/sass/var/lists";
 @import "../bower_components/gumby/sass/var/icons/entypo";
 
@@ -35,4 +36,11 @@
 @import "../bower_components/gumby/sass/ui/all";
 @import "../bower_components/gumby/sass/shame";
 
+@import "defaults";
+@import "ui/header";
+@import "ui/footer";
+@import "ui/sidebar";
+@import "ui/home";
+@import "ui/page";
+@import "ui/single";
 @import "custom";
